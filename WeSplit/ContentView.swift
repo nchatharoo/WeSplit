@@ -40,6 +40,7 @@ struct ContentView: View {
                 Section {
                     TextField("Amount", text: $checkAmount)
                         .keyboardType(.decimalPad)
+                        .foregroundColor(tipPercentages[tipPercentage] == 0 ? Color.red : Color.black)
 
                     TextField("Number of people", value: $numberOfPeople, formatter: NumberFormatter())
                 }
